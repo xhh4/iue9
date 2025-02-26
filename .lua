@@ -5,7 +5,7 @@ getgenv().iue9 = {
         Mode = "Toggle"
     },
     
-    Aimbot = {
+    Camlock = {
         Checks = {
             KO = false,
             Team = false,
@@ -70,6 +70,58 @@ getgenv().iue9 = {
                 Style = "Linear",
                 Direction = "Out"
             }
+        }
+    },
+    
+    SilentAim = {
+        Enabled = true,
+        Checks = {
+            KO = false,
+            Team = false,
+            Wall = false,
+            Friend = false,
+            Distance = {
+                Enabled = false,
+                Max = 500
+            },
+            Whitelist = {
+                Enabled = false,
+                Players = {}
+            }
+        },
+        FOV = {
+            Enabled = true,
+            Radius = 120,
+            Visible = true,
+            Color = Color3.fromRGB(255, 255, 255),
+            Transparency = 0.5,
+            Filled = false,
+            Thickness = 1
+        },
+        Prediction = {
+            Amount = 0.1,
+            AutoPrediction = {
+                Enabled = true,
+                Math = true,
+                PingBased = {
+                    Enabled = false,
+                    [10] = 0.1,
+                    [20] = 0.12,
+                    [30] = 0.14,
+                    [40] = 0.16,
+                    [50] = 0.18,
+                    [60] = 0.2
+                }
+            }
+        },
+        Targeting = {
+            SinglePart = "HumanoidRootPart",
+            MultiPart = {
+                Enabled = false,
+                Parts = {"Head", "HumanoidRootPart"}
+            },
+            NearestPart = false,
+            NearestPoint = false
         }
     },
     
