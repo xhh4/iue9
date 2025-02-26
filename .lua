@@ -2,12 +2,23 @@ script_key="YOUR-KEY-HERE"; -- reaplce "YOUR-KEY-HERE" with your key you got fro
 getgenv().iue9 = {
     Binding = {
         Keybind = "Q",
-        Mode = "Toggle"         -- // [Hold, Toggle]
+        Mode = "Toggle"
     },
     
     Aimbot = {
         Checks = {
-            KO = false
+            KO = false,
+            Team = false,
+            Wall = false,
+            Friend = false,
+            Distance = {
+                Enabled = false,
+                Max = 500
+            },
+            Whitelist = {
+                Enabled = false,
+                Players = {}
+            }
         },
         FOV = {
             Enabled = true,
@@ -35,7 +46,7 @@ getgenv().iue9 = {
             }
         },
         Targeting = {
-            SinglePart = "HumanoidRootPart", -- // [Head, HumanoidRootPart, UpperTorso, etc.]
+            SinglePart = "HumanoidRootPart",
             MultiPart = {
                 Enabled = false,
                 Parts = {"Head", "HumanoidRootPart"}
@@ -56,8 +67,8 @@ getgenv().iue9 = {
             },
             JumpOffset = -1.50,
             Easing = {
-                Style = "Linear", -- // [Linear, Quad, Cubic, Quart, Quint, etc.]
-                Direction = "Out" -- // [In, Out, InOut]
+                Style = "Linear",
+                Direction = "Out"
             }
         }
     },
@@ -87,12 +98,12 @@ getgenv().iue9 = {
                 Transparency = 1
             },
             Name = {
-                Enabled = true,
+                Enabled = false,
                 Color = Color3.fromRGB(255, 255, 255),
                 Size = 14,
                 Outline = true,
                 OutlineColor = Color3.fromRGB(0, 0, 0),
-                Font = 2, -- // [0, 1, 2, 3]
+                Font = 2,
                 Transparency = 1
             },
             HealthBar = {
@@ -107,13 +118,13 @@ getgenv().iue9 = {
                 Outline = true,
                 OutlineColor = Color3.fromRGB(0, 0, 0),
                 Size = 12,
-                Font = 2, -- // [0, 1, 2, 3]
+                Font = 2,
                 Transparency = 1,
                 Max = 1000
             },
             Tracers = {
                 Enabled = false,
-                Origin = "Bottom", -- // [Bottom, Center, Mouse]
+                Origin = "Bottom",
                 Color = Color3.fromRGB(255, 255, 255),
                 Thickness = 1,
                 Transparency = 1
@@ -142,7 +153,7 @@ getgenv().iue9 = {
             },
             Time = {
                 Lock = false,
-                Value = 14, -- // [0-24]
+                Value = 14,
                 Cycle = {
                     Enabled = false,
                     Speed = 1
@@ -163,14 +174,14 @@ getgenv().iue9 = {
                 IgnorePlayers = true,
                 TextureId = "",
                 Color = Color3.fromRGB(255, 255, 255),
-                Material = "SmoothPlastic", -- // [SmoothPlastic, Plastic, Wood, Slate, Concrete, etc.]
+                Material = "SmoothPlastic",
                 Transparency = 0
             }
         },
         SpeedGlitch = {
             Enabled = true,
             Bypass = false,
-            Keybind = "Z",
+            Keybind = "V",
             Amount = 324
         },
         InventorySorter = {
@@ -193,7 +204,7 @@ getgenv().iue9 = {
             Enabled = false,
             Use_Keybind = false,
             Keybind = "J",
-            Mode = "Toggle", -- // [Toggle, Hold]
+            Mode = "Toggle",
             Delay = {
                 Enabled = true,
                 Min = 0.05,
@@ -210,18 +221,21 @@ getgenv().iue9 = {
                 Value = 100
             },
             TargetPart = {
-                SinglePart = "HumanoidRootPart", -- // [Head, HumanoidRootPart, UpperTorso, etc.]
+                SinglePart = "HumanoidRootPart",
                 Parts = {"Head", "HumanoidRootPart", "UpperTorso"},
                 Priority = true
             },
             Checks = {
-                KO = true
+                KO = true,
+                Team = false,
+                Friend = false,
+                Wall = true
             }
         },
         HitDetection = {
             Sound = {
                 Enabled = true,
-                AudioId = "Minecraft", -- // [Minecraft, Bameware, Bell, Bubble, Pick, Pop, Rust, Sans, Fart, Big, Vine, Bruh, Skeet, Neverlose, Fatality, Bonk]
+                AudioId = "Minecraft",
                 Volume = 1
             },
             Logs = {
