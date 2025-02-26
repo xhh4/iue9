@@ -70,7 +70,7 @@ getgenv().iue9 = {
     
     Visual = {
         ESP = {
-            Enabled = true,
+            Enabled = false,
             Players = {
                 TeamCheck = false,
                 TeamColor = true,
