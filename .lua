@@ -6,6 +6,7 @@ getgenv().iue9 = {
     },
     
     Camlock = {
+        Enabled = true,
         Checks = {
             KO = false,
             Team = false,
@@ -37,7 +38,7 @@ getgenv().iue9 = {
                 PingBased = {
                     Enabled = false,
                     [10] = 0.1,
-                    [20] = 0.12,
+                    [20] = 0.1,
                     [30] = 0.14,
                     [40] = 0.16,
                     [50] = 0.18,
@@ -106,7 +107,7 @@ getgenv().iue9 = {
                 PingBased = {
                     Enabled = false,
                     [10] = 0.1,
-                    [20] = 0.12,
+                    [20] = 0.1,
                     [30] = 0.14,
                     [40] = 0.16,
                     [50] = 0.18,
@@ -141,7 +142,7 @@ getgenv().iue9 = {
                 EnemyColor = Color3.fromRGB(255, 0, 0)
             },
             Box = {
-                Enabled = false,
+                Enabled = true,
                 Color = Color3.fromRGB(255, 255, 0),
                 Thickness = 1,
                 Outline = true,
@@ -150,7 +151,7 @@ getgenv().iue9 = {
                 Transparency = 1
             },
             Name = {
-                Enabled = false,
+                Enabled = true,
                 Color = Color3.fromRGB(255, 255, 255),
                 Size = 14,
                 Outline = true,
@@ -165,7 +166,7 @@ getgenv().iue9 = {
                 Transparency = 1
             },
             Distance = {
-                Enabled = false,
+                Enabled = true,
                 Color = Color3.fromRGB(255, 255, 255),
                 Outline = true,
                 OutlineColor = Color3.fromRGB(0, 0, 0),
