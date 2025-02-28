@@ -186,7 +186,7 @@ getgenv().iue9 = {
     },
     
     Miscellaneous = {
-        Target_Indicator = {
+        TargetIndicator = {
             Enabled = false, -- // Show target indicator
             Show_DisplayName = true, -- // Show display name
             Show_Username = true, -- // Show username
@@ -229,6 +229,15 @@ getgenv().iue9 = {
                 Color = Color3.fromRGB(255, 255, 255), -- // Texture color
                 Material = "SmoothPlastic", -- // Material type
                 Transparency = 0 -- // Texture transparency
+            },
+            Skybox = {
+                Enabled = false, -- // Enable custom skybox
+                SkyboxBk = "http://www.roblox.com/asset/?id=322645416", -- // Back texture
+                SkyboxDn = "http://www.roblox.com/asset/?id=322645416", -- // Down texture
+                SkyboxFt = "http://www.roblox.com/asset/?id=322645416", -- // Front texture
+                SkyboxLf = "http://www.roblox.com/asset/?id=322645416", -- // Left texture
+                SkyboxRt = "http://www.roblox.com/asset/?id=322645416", -- // Right texture
+                SkyboxUp = "http://www.roblox.com/asset/?id=322645416" -- // Up texture
             }
         },
         SpeedGlitch = {
