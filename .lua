@@ -42,7 +42,7 @@ getgenv().iue9 = {
                     [30] = 0.14,
                     [40] = 0.16,
                     [50] = 0.18,
-                    [60] = 0.2
+                    [60] = 0.028
                 }
             }
         },
@@ -111,7 +111,7 @@ getgenv().iue9 = {
                     [30] = 0.14,
                     [40] = 0.16,
                     [50] = 0.18,
-                    [60] = 0.2
+                    [60] = 0.028
                 }
             }
         },
@@ -240,7 +240,7 @@ getgenv().iue9 = {
                 SkyboxUp = "http://www.roblox.com/asset/?id=322645416" -- // Up texture
             }
         },
-        SpeedGlitch = {
+        SpeedHack = {
             Enabled = true, -- // Enable speed glitch
             Bypass = false, -- // Use bypass method
             Keybind = "V", -- // Key to toggle speed
@@ -307,4 +307,5 @@ getgenv().iue9 = {
         }
     }
 }
+
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6a2096b6b4e7f0e348b61983370e92d2.lua"))()
