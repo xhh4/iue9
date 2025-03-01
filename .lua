@@ -133,75 +133,82 @@ getgenv().iue9 = {
     },
     
     Visual = {
-        ESP = {
-            Enabled = false, -- // Master toggle for ESP
-            Players = {
-                TeamCheck = false, -- // Apply team check to ESP
-                TeamColor = true, -- // Use team colors for ESP
-                AllyColor = Color3.fromRGB(0, 255, 0), -- // Color for allies
-                EnemyColor = Color3.fromRGB(255, 0, 0) -- // Color for enemies
+        Crosshair = {
+            Enabled = true, -- // Toggle the crosshair on/off
+            Width = 1.5, -- // Line width of the crosshair
+            Length = 10, -- // Length of crosshair lines
+            Radius = 11, -- // Distance from center to start of lines
+            Color = Color3.fromRGB(173, 216, 230), -- // Color of the crosshair (red)
+
+            Spin = {
+                Enabled = true, -- // Enable spinning animation
+                Speed = 150, -- // Rotation speed of spin
+                Max = 340, -- // Maximum spin angle
+                Style = Enum.EasingStyle.Sine, -- // Animation style for smooth motion
             },
-            Box = {
-                Enabled = true, -- // Show box ESP
-                Color = Color3.fromRGB(255, 255, 0), -- // Box color
-                Thickness = 1, -- // Box line thickness
-                Outline = true, -- // Show box outline
-                OutlineColor = Color3.fromRGB(0, 0, 0), -- // Outline color
-                OutlineThickness = 2, -- // Outline thickness
-                Transparency = 1 -- // Box transparency
+
+            Resize = {
+                Enabled = true, -- // Enable size pulsing animation
+                Speed = 150, -- // Speed of size changes
+                Min = 5, -- // Minimum size during animation
+                Max = 22, -- // Maximum size during animation
             },
-            Name = {
-                Enabled = true, -- // Show name ESP
-                Color = Color3.fromRGB(255, 255, 255), -- // Name color
-                Size = 14, -- // Name text size
-                Outline = true, -- // Show name outline
-                OutlineColor = Color3.fromRGB(0, 0, 0), -- // Outline color
-                Font = 2, -- // Name font
-                Transparency = 1 -- // Name transparency
+
+            Watermark = {
+                Enabled = true, -- // Show watermark text
+                Text = "iue9", -- // Primary text
+                SubText = ".cc", -- // Secondary text (shown in accent color)
+                Size = 13, -- // Text size
+                Color = Color3.fromRGB(255, 255, 255), -- // Color of main text (white)
+                AccentColor = Color3.fromRGB(173, 216, 230), -- // Color of secondary text (red)
+                Outline = true, -- // Add outline to text for better visibility
             },
-            HealthBar = {
-                Enabled = true, -- // Show health bar
-                OutlineThickness = 3, -- // Health bar outline thickness
-                Thickness = 1.5, -- // Health bar thickness
-                Transparency = 1 -- // Health bar transparency
-            },
-            Distance = {
-                Enabled = true, -- // Show distance ESP
-                Color = Color3.fromRGB(255, 255, 255), -- // Distance text color
-                Outline = true, -- // Show distance outline
-                OutlineColor = Color3.fromRGB(0, 0, 0), -- // Outline color
-                Size = 12, -- // Distance text size
-                Font = 2, -- // Distance font
-                Transparency = 1, -- // Distance transparency
-                Max = 1000 -- // Maximum display distance
-            },
-            Tracers = {
-                Enabled = false, -- // Show tracers
-                Origin = "Bottom", -- // Tracer origin point
-                Color = Color3.fromRGB(255, 255, 255), -- // Tracer color
-                Thickness = 1, -- // Tracer thickness
-                Transparency = 1 -- // Tracer transparency
-            }
+        },
+
+        Highlight = {
+            Enabled = true, -- // Toggle highlighting of players
+            Mode = "Everyone", -- // Everyone = all players except local player, Target = only targets
+            Color = Color3.fromRGB(173, 216, 230), -- // Color of the highlight (red)
+            Transparency = 0.5, -- // Opacity of the highlight effect
+        },
+        
+        HealthBar = {
+            Enabled = true, -- // Toggle health bars on players
+            Color = Color3.fromRGB(0, 255, 0), -- // Color of full health (green)
+            Position = "Left", -- // Left, Right, Top, Bottom position relative to player
+            Size = 1, -- // Thickness of the health bar
+            Outline = true, -- // Show outline around health bar
+            OutlineColor = Color3.fromRGB(0, 0, 0), -- // Color of outline (black)
+        },
+        
+        Names = {
+            Enabled = true, -- // Toggle name tags on players
+            Color = Color3.fromRGB(255, 255, 255), -- // Color of name text (white)
+            Size = 14, -- // Text size
+            Outline = true, -- // Show outline around text
+            OutlineColor = Color3.fromRGB(0, 0, 0), -- // Color of outline (black)
+            ShowDistance = true, -- // Show distance to player
+            ShowHealth = true, -- // Show health value of player
         }
     },
     
     Miscellaneous = {
         TargetIndicator = {
             Enabled = false, -- // Show target indicator
-            Show_DisplayName = true, -- // Show display name
-            Show_Username = true, -- // Show username
-            Show_Health = true, -- // Show health
-            Show_Distance = true, -- // Show distance
+            ShowDisplayName = true, -- // Show display name
+            ShowUsername = true, -- // Show username
+            ShowHealth = true, -- // Show health
+            ShowDistance = true, -- // Show distance
             Color = Color3.fromRGB(255, 255, 255), -- // Indicator text color
             Transparency = 1, -- // Indicator transparency
             Size = 18, -- // Indicator text size
             Outline = true, -- // Show indicator outline
-            Outline_Color = Color3.fromRGB(0, 0, 0) -- // Outline color
+            OutlineColor = Color3.fromRGB(0, 0, 0) -- // Outline color
         },
         World = {
             Ambient = {
                 Enabled = false, -- // Enable ambient lighting changes
-                Color = Color3.fromRGB(255, 255, 255), -- // Ambient color
+                Color = Color3.fromRGB(173, 216, 230), -- // Ambient color
                 Brightness = 1 -- // Ambient brightness
             },
             Time = {
@@ -307,5 +314,4 @@ getgenv().iue9 = {
         }
     }
 }
-
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/6a2096b6b4e7f0e348b61983370e92d2.lua"))()
